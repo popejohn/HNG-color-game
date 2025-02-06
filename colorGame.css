@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-display{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: blueviolet;
+    left: 0;
+    top: 0;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out
+}
+
+.slide-off{
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+
+.box-animate{
+    width: 25%;
+    min-width: 300px;
+    border: 1px solid white;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+.color{
+    color: orange;
+}
+
+.lilac{
+    color: lightgray;
+}
+.box{
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    transition: all linear ease-in-out;
+    position: absolute;
+}
+
+button{
+    background-color: rgb(185, 124, 11);
+}
+
+.box-top{
+    animation-name: popUp;
+    top: 100%;
+}
+
+.box-bottom{
+    animation-name: popUp2;
+    bottom: 100%;
+}
+.box1{
+    animation-delay: 500ms;
+    top: 0;
+    left: 0;
+}
+.box2{
+    animation-delay: 800ms;
+    top: 0;
+    right: 0;
+}
+.box3{
+    animation-delay: 1100ms;
+    bottom: 0;
+    left: 0;
+}
+.box4{
+    animation-delay: 1500ms;
+    right: 0;
+    bottom: 0;
+}
+.game-container{
+    box-shadow: 0 0 5px 5px rgba(215, 211, 211, 0.288);
+}
+
+.color-box{
+    width: 180px;
+    height: 180px;
+}
+.color-option{
+    width: 120px;
+    height: 50px;
+    max-width: 150px;
+}
+.status-failed{
+    transition: opacity 6s ease-in-out;
+    opacity: 0;
+
+}
+.status-success{
+    animation: blink 2s ease-in-out infinite;
+}
+.timer{
+    width: 50px;
+}
+
+
+
+
+
+
+
+@keyframes popUp {
+    0%{
+        top: 50%
+    }
+    100%{
+        top: 0
+    }
+
+}
+@keyframes popUp2 {
+    0%{
+        bottom: 50%
+    }
+    100%{
+        bottom: 0
+    }
+
+}
+@keyframes blink {
+    0%{
+        opacity: 1
+    }
+    100%{
+        opacity: 0
+    }
+
+}
